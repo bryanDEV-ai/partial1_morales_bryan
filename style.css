@@ -1,0 +1,186 @@
+:root {
+    --verde: #1faa8a;
+    --verde-oscuro: #0e6e59;
+    --dorado: #f0b429;
+    --texto: #1d2b27;
+    --gris: #f3f6f5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 15px;
+    min-height: 100vh;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--texto);
+    background: linear-gradient(135deg, #0e6e59 0%, #1faa8a 55%, #f0b429 130%);
+    background-attachment: fixed;
+}
+
+/* Tarjeta principal */
+.card {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 40px 30px 45px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 20px;
+    border-top: 8px solid var(--dorado);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* Encabezado */
+h1 {
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: 3px;
+    color: var(--verde-oscuro);
+}
+
+h2 {
+    margin: 8px 0 20px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #5b6b66;
+}
+
+.logo {
+    width: 130px;
+    height: auto;
+}
+
+.universidad {
+    margin: 10px 0 0;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--verde-oscuro);
+}
+
+/* Botón Mario */
+.btn-mario {
+    display: inline-block;
+    margin: 20px 0 10px;
+    padding: 12px 34px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-decoration: none;
+    background: linear-gradient(135deg, #e63946, #b5171f);
+    border-radius: 50px;
+    box-shadow: 0 6px 14px rgba(181, 23, 31, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-mario:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 10px 20px rgba(181, 23, 31, 0.5);
+}
+
+/* Secciones */
+.seccion {
+    margin-top: 30px;
+    padding: 20px 15px 25px;
+    background: var(--gris);
+    border-radius: 14px;
+}
+
+h3 {
+    margin: 0 0 15px;
+    padding-bottom: 8px;
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: var(--verde-oscuro);
+    border-bottom: 3px solid var(--dorado);
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.boton {
+    width: 100%;
+    max-width: 320px;
+    padding: 11px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--verde-oscuro);
+    text-decoration: none;
+    background: #ffffff;
+    border: 2px solid var(--verde);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.boton:hover {
+    color: #ffffff;
+    background: var(--verde);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(31, 170, 138, 0.35);
+}
+
+/* Estudiante */
+.estudiante {
+    margin-top: 35px;
+}
+
+.nombre {
+    margin: 5px 0;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--texto);
+}
+
+.correo {
+    margin: 5px 0 25px;
+    font-size: 14px;
+}
+
+.correo a {
+    color: var(--verde-oscuro);
+    text-decoration: none;
+}
+
+.correo a:hover {
+    text-decoration: underline;
+}
+
+.foto {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 50%;
+    border: 6px solid var(--dorado);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    background: var(--gris);
+}
+
+/* Celular */
+@media (max-width: 480px) {
+    .card {
+        padding: 30px 18px;
+    }
+    h1 {
+        font-size: 26px;
+    }
+    .nombre {
+        font-size: 19px;
+    }
+    .foto {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+}
